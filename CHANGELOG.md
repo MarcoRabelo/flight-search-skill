@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.2] - 2026-03-02
+
+### 📚 Documentation
+- **Added credential metadata** - Declared required/optional API keys in SKILL.md frontmatter
+- **Clear credential requirements** - Users now know what credentials are needed before installing
+- **Configuration instructions** - Added step-by-step guide for setting up config.json
+- **Security warnings** - Emphasized importance of not committing API keys
+
+### 🔧 Changed
+- **Metadata now matches reality** - Registry will show required credentials
+- **No code changes** - Documentation-only update
+- **Better user experience** - Users know upfront what's required
+
+---
+
 ## [1.0.1] - 2026-03-02
 
 ### 📚 Documentation
@@ -92,6 +107,7 @@ First public release of Flight Search skill with comprehensive security audit.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **1.0.2** | 2026-03-02 | Added credential metadata to SKILL.md |
 | **1.0.1** | 2026-03-02 | Documentation improvements (simplified SECURITY.md) |
 | **1.0.0** | 2026-03-01 | Initial release with security fixes |
 
