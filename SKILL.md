@@ -2,7 +2,7 @@
 name: flight-search
 description: Search flights, compare prices, and monitor airfare using Amadeus API
 author: marco-rabelo
-version: 1.0.0
+version: 1.0.1
 triggers:
   - "search flights"
   - "find flights"
