@@ -2,7 +2,7 @@
 name: flight-search
 description: Search flights, compare prices, and monitor airfare using Amadeus API
 author: marco-rabelo
-version: 1.0.1
+version: 1.0.2
 triggers:
   - "search flights"
   - "find flights"
@@ -11,11 +11,64 @@ triggers:
   - "plane tickets"
   - "book flights"
   - "flight status"
+credentials:
+  required:
+    - name: AMADEUS_API_KEY
+      description: Amadeus API key for flight search
+      how_to_get: Visit developers.amadeus.com, create account, and create an app
+    - name: AMADEUS_API_SECRET
+      description: Amadeus API secret for authentication
+      how_to_get: Provided when you create an app on developers.amadeus.com
+  optional:
+    - name: AVIATIONSTACK_API_KEY
+      description: AviationStack API key for flight status (optional)
+      how_to_get: Visit aviationstack.com and sign up for free tier (100 requests/month)
 ---
 
 # Flight Search
 
 Search flights, compare prices across airlines, and monitor airfare drops. Supports flexible dates, price alerts, and flight status tracking.
+
+## ⚠️ Required Credentials
+
+**This skill requires API credentials to function:**
+
+### **Required (Amadeus):**
+- `AMADEUS_API_KEY` - Get from [developers.amadeus.com](https://developers.amadeus.com)
+- `AMADEUS_API_SECRET` - Provided when you create an app
+
+**Free Tier:** 2,000 searches/month (sandbox) or production free tier with real prices
+
+### **Optional (AviationStack):**
+- `AVIATIONSTACK_API_KEY` - Get from [aviationstack.com](https://aviationstack.com)
+
+**Free Tier:** 100 requests/month (very limited, only for flight status)
+
+## Configuration
+
+After installing, copy `config.example.json` to `config.json` and add your credentials:
+
+```json
+{
+  "apis": {
+    "amadeus": {
+      "api_key": "YOUR_AMADEUS_API_KEY",
+      "api_secret": "YOUR_AMADEUS_API_SECRET",
+      "sandbox_mode": true
+    },
+    "aviationstack": {
+      "enabled": false,
+      "api_key": "YOUR_AVIATIONSTACK_API_KEY"
+    }
+  }
+}
+```
+
+**🔒 Security:** 
+- `config.json` is in `.gitignore` by default
+- Never commit API keys to version control
+- Use environment variables or secure config files
+- Rotate keys if accidentally exposed
 
 ## What it does
 

@@ -2,7 +2,7 @@
 
 ## ✅ Current Status: Production Ready
 
-**All security issues identified during development have been resolved in v1.0.1.**
+**All security issues identified during development have been resolved in v1.0.0.**
 
 This skill has undergone comprehensive security auditing and all vulnerabilities have been fixed.
 
@@ -95,7 +95,7 @@ If you discover a security vulnerability:
 
 ## 📜 Security History
 
-**v1.0.1 (March 2026):**
+**v1.0.0 (March 2026):**
 - ✅ 18 security issues identified and fixed during development
 - ✅ All P1 (critical) vulnerabilities resolved
 - ✅ All P2 (medium) vulnerabilities resolved
